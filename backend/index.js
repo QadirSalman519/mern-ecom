@@ -13,7 +13,7 @@ app.post('/register',async (req,resp)=>{
     let result = await user.save()
     resp.send(result)
 })
-app.listen(5000)
+app.listen(8000)
 
 // Only For Testing
 // const dbConnect=async ()=>{
