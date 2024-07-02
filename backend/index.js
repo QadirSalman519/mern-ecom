@@ -11,8 +11,23 @@ app.get('/',(req,rsp)=>{
 app.post('/register',async (req,resp)=>{
     let user = new User(req.body)
     let result = await user.save()
+    result = result.toObject()
+    delete result.password
     resp.send(result)
 })
+app.post('/login',async (req,resp)=>{
+    if(req.body.email && req.body.email){
+        let user = await User.findOne(req.body).select('-password')
+        if(user){
+            resp.send(user)
+        }else{
+            resp.send({result:'No Record Found'})
+        }
+    }else{
+        resp.send({result:'Email and Password fields are required'}) 
+    }
+})
+
 app.listen(8000)
 
 // Only For Testing

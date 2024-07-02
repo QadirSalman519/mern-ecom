@@ -28,6 +28,10 @@
 .register{
   margin-left: 40%;
 }
+.login{
+  margin-left: 40%;
+  padding-top: 30px;
+}
 
 .inputBox{
   display: block;
