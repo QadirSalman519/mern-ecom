@@ -25,12 +25,20 @@
   color: #fff;
 }
 
-.register{
+.register,.product{
   margin-left: 40%;
 }
+
 .login{
   margin-left: 40%;
   padding-top: 30px;
+}
+
+.logo {
+  width: 100px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 30px;
 }
 
 .inputBox{
@@ -47,4 +55,21 @@
   background-color: skyblue;
   border: 1px solid;
   cursor: pointer;
+}
+.invalid-input{
+  color: red;
+  margin-top: -20px;
+  display: block;
+  margin-left: 20px;
+}
+.product-list{
+  text-align: center;
+  margin-top: 50px;
+}
+.product-list ul li{
+  display: inline-block;
+  border: 1px solid skyblue;
+  padding: 5px;
+  width: 150px;
+  text-align: center;
 }

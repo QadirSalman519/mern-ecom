@@ -15,7 +15,6 @@ const Register=()=>{
     })
 
     const collectData = async ()=>{
-        console.warn(name,email,password)
         let result = await fetch('http://localhost:8000/register',{
             method:'post',
             body:JSON.stringify({name,email,password}),
