@@ -36,7 +36,6 @@ app.post('/add-product', async (req,resp)=>{
     let product = new Product(req.body)
     let result = await product.save()
     resp.send(result)
-
 })
 
 app.get('/products', async (req,resp)=>{
@@ -47,6 +46,20 @@ app.get('/products', async (req,resp)=>{
         resp.send({
             result:'No Products Available'
         })
+    }
+})
+
+app.delete('/delete-product/:id',async (req,resp)=>{
+    let result = await Product.deleteOne({_id:req.params.id})
+    resp.send(result)
+})
+
+app.get('/product/:id',async (req,resp)=>{
+    let result = await Product.findOne({_id:req.params.id})
+    if(result){
+        resp.send(result)
+    }else{
+        resp.send({result:'Product Not Available'})
     }
 })
 

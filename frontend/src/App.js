@@ -6,6 +6,7 @@ import Signup from './components/SignUp.js'
 import Login from './components/Login.js'
 import AddProduct from './components/AddProduct.js';
 import Product from './components/Product.js'
+import UpdateProduct from './components/UpdateProduct.js'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PrivateComponent from './components/PrivateComponent.js';
 
@@ -18,7 +19,7 @@ function App() {
           <Route element={<PrivateComponent/>}> {/* This will make components private */}
             <Route path="/" element={<Product />} />
             <Route path="/add" element={<AddProduct/>} />
-            <Route path="/update" element={<h1>Update Product Component</h1>} />
+            <Route path="/update/:id" element={<UpdateProduct/>} />
             <Route path="/logout" element={<h1>Logout Component</h1>} />
             <Route path="/profile" element={<h1>Profile Component</h1>} />
           </Route>
