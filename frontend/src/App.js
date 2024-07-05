@@ -5,7 +5,7 @@ import Footer from './components/Footer.js';
 import Signup from './components/SignUp.js'
 import Login from './components/Login.js'
 import AddProduct from './components/AddProduct.js';
-import Product from './components/Product.js'
+import Product from './components/ProductList.js'
 import UpdateProduct from './components/UpdateProduct.js'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PrivateComponent from './components/PrivateComponent.js';

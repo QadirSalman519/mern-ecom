@@ -72,6 +72,20 @@ app.put('/update-product/:id',async (req,resp)=>{
     resp.send(result)
 })
 
+app.get('/search/:keyword', async (req, resp) => {
+
+    const keyword = req.params.keyword;
+    let result = await Product.find({
+        "$or":[
+            {name:{$regex:keyword}},
+            {company:{$regex:keyword}},
+            {price:{$regex:keyword}},
+            {category:{$regex:keyword}},
+        ]
+    })
+    resp.send(result)
+})
+
 app.listen(8000)
 
 // Only For Testing
