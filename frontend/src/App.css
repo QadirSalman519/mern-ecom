@@ -73,3 +73,10 @@
   width: 150px;
   text-align: center;
 }
+.search-product{
+  width: 400px;
+  margin: 20px;
+  height: 40px;
+  border: 1px solid skyblue;
+  padding-left: 20px;
+}
