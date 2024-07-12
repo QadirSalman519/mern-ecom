@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const AddProduct = ()=>{
     const [name,setName] = useState("")
@@ -6,6 +7,7 @@ const AddProduct = ()=>{
     const [price,setPrice] = useState("")
     const [company,setCompany] = useState("")
     const [error,setError] = useState(false)
+    const navigate = useNavigate()
     
     const submitProduct = async ()=>{
 
@@ -23,6 +25,7 @@ const AddProduct = ()=>{
             }
         })
         result = await result.json()
+        navigate('/')
         console.log(result)
     }
 
